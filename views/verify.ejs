@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIFY</title>
+    <link rel='stylesheet' href='/css/main.css'>
+    <style>
+        input {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="/verify" method="POST">
+        <label class="field">
+            <input autocomplete="off" autofocus required id="num" maxlength="6" pattern="[0-9]{6}" name="num" type="text" class="field__input"
+                placeholder="OTP"/>
+        </label>
+        <button type="submit">VERIFY</button>
+    </form>
+    <button class="btn">BACK</button>
+    <% if (verified === true) { %>
+        <div id="alrtc">
+            <div id="alrt">
+                <h3 id="msg">OTP VERIFIED</h3>
+            </div>
+        </div>
+    <% } else if (verified === false) { %>
+        <div id="alrtc">
+            <div id="alrt">
+                <h3 id="msg">OTP NOT VERIFIED</h3>
+            </div>
+        </div>
+    <% } %>
+    <script>
+        document.querySelector('.btn').addEventListener('click', (e) => {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+</html>
