@@ -1,11 +1,12 @@
 {
-  "name": "MAIL-AUTH",
+  "name": "mailauth",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "nodemon server.test.js",
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
