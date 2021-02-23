@@ -1,10 +1,12 @@
 const express = require('express');
 const mail = require('./mail');
 const app = express();
+
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
     console.log('dotenv loaded');
 }
+
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false, limit: '150mb' }));
 app.use(express.json());
