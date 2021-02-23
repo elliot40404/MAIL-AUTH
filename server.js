@@ -1,7 +1,7 @@
 const express = require('express');
 const mail = require('./mail');
 const app = express();
-if (process.env.NODE_ENV !== 'PROD') {
+if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
     console.log('dotenv loaded');
 }
